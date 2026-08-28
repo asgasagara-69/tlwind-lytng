@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Data Siswa - Lab Komputer</title>
+  <link rel="stylesheet" href="./src/output.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in { animation: fadeIn 0.4s ease-out forwards; }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-slate-800 to-amber-950 min-h-screen text-slate-100 p-4 sm:p-8 relative">
+
+  <!-- Efek Cahaya Background Dekoratif -->
+  <div class="fixed w-[500px] h-[500px] bg-amber-500/5 rounded-full blur-3xl -top-32 -left-32 pointer-events-none"></div>
+  <div class="fixed w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-3xl -bottom-32 -right-32 pointer-events-none"></div>
+
+  <!-- CONTAINER UTAMA -->
+  <div class="max-w-7xl mx-auto space-y-6 animate-fade-in relative z-10">
+    
+    <!-- Header Navbar Responsif -->
+    <header class="bg-slate-900/80 backdrop-blur-xl p-4 sm:px-8 sm:py-5 rounded-2xl border border-slate-700/60 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-amber-500/20 border border-amber-500/30 rounded-xl flex items-center justify-center text-amber-400 font-black shadow-inner">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <div>
+          <h1 class="font-bold text-white text-sm sm:text-base">Lab Komputer Dashboard</h1>
+          <p class="text-xs text-slate-400">Sistem Monitoring Praktik Siswa</p>
+        </div>
+      </div>
+      <a href="index.html" class="px-4 py-2 bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 border border-rose-500/30 font-bold rounded-xl text-xs transition duration-200">
+        Keluar Sistem
+      </a>
+    </header>
+
+    <!-- Konten Tabel Utama -->
+    <main class="bg-slate-900/80 backdrop-blur-xl rounded-3xl border border-slate-700/60 shadow-xl overflow-hidden mb-8">
+      <div class="p-6 sm:p-8 border-b border-slate-700/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div>
+          <h2 class="text-lg sm:text-xl font-extrabold tracking-tight text-white">Daftar Siswa Aktif</h2>
+          <p class="text-xs sm:text-sm text-slate-400">Data lengkap siswa yang terdaftar menggunakan laboratorium komputer.</p>
+        </div>
+        <button class="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold rounded-xl text-xs transition-all duration-200 shadow-md shadow-amber-500/20 active:scale-95">
+          + Tambah Siswa
+        </button>
+      </div>
+
+      <!-- Tabel Responsif -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-sm">
+          <thead>
+            <tr class="bg-slate-800/50 border-b border-slate-700 text-slate-400 uppercase tracking-wider text-[11px] font-bold">
+              <th class="py-4 px-6">No</th>
+              <th class="py-4 px-6">Nama</th>
+              <th class="py-4 px-6">Gender</th>
+              <th class="py-4 px-6">Tgl Lahir</th>
+              <th class="py-4 px-6">No HP</th>
+              <th class="py-4 px-6">Alamat</th>
+              <th class="py-4 px-6 text-center">Aksi</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-700/50 text-slate-300">
+            <tr class="hover:bg-slate-800/40 transition duration-150">
+              <td class="py-4 px-6 font-medium text-slate-500">01</td>
+              <td class="py-4 px-6 font-bold text-white">Asga</td>
+              <td class="py-4 px-6">Laki-laki</td>
+              <td class="py-4 px-6">12 Jan 2008</td>
+              <td class="py-4 px-6">081234567890</td>
+              <td class="py-4 px-6 text-slate-400">Jl. Merdeka No. 10, Bandung</td>
+              <td class="py-4 px-6 text-center space-x-3">
+                <button class="text-amber-400 hover:text-amber-300 font-bold text-xs transition">Edit</button>
+                <button class="text-rose-400 hover:text-rose-300 font-bold text-xs transition">Hapus</button>
+              </td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition duration-150">
+              <td class="py-4 px-6 font-medium text-slate-500">02</td>
+              <td class="py-4 px-6 font-bold text-white">Budi Santoso</td>
+              <td class="py-4 px-6">Laki-laki</td>
+              <td class="py-4 px-6">25 May 2008</td>
+              <td class="py-4 px-6">089876543210</td>
+              <td class="py-4 px-6 text-slate-400">Jl. Asia Afrika No. 45, Bandung</td>
+              <td class="py-4 px-6 text-center space-x-3">
+                <button class="text-amber-400 hover:text-amber-300 font-bold text-xs transition">Edit</button>
+                <button class="text-rose-400 hover:text-rose-300 font-bold text-xs transition">Hapus</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
